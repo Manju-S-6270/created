@@ -32,7 +32,7 @@ def get_onready():
     return channel_onready #チャンネル情報を返す
 
 def mcsaveuser(UUID,MCID,DSID):
-    with open('uuidconnect.csv', mode='a', newline='') as csvfile:
+    with open('save.csv', mode='a', newline='') as csvfile:
         uuid_writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         uuid_writer.writerow([DSID, UUID, MCID])
 
